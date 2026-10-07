@@ -41,8 +41,6 @@
             color: var(--dark);
         }
 
-        /* ================= HEADER ================= */
-
         header {
             position: fixed;
             top: 0;
@@ -116,7 +114,7 @@
             transform: translateY(-2px);
         }
 
-        /* ================= HERO ================= */
+        /* HERO */
 
         .hero {
             min-height: 780px;
@@ -237,8 +235,6 @@
             color: var(--dark);
         }
 
-        /* Hero fashion figure */
-
         .hero-fashion {
             position: relative;
             min-height: 500px;
@@ -294,15 +290,18 @@
             display: flex;
             align-items: center;
             justify-content: center;
+
+            overflow: hidden;
         }
 
-        .fashion-card svg {
-            width: 90%;
-            height: 90%;
-            filter: drop-shadow(0 20px 20px rgba(0,0,0,.3));
+        .fashion-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
         }
 
-        /* ================= CATEGORIES ================= */
+        /* CATEGORIAS */
 
         .section {
             max-width: 1250px;
@@ -411,7 +410,7 @@
             color: #f5dce5;
         }
 
-        /* ================= PRODUCTS ================= */
+        /* PRODUTOS */
 
         .product-section {
             background: #fff;
@@ -465,14 +464,16 @@
             background: linear-gradient(145deg,#3d202d,#160f15);
         }
 
-        .product-image svg {
-            width: 78%;
-            height: 90%;
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
             transition: .5s;
         }
 
-        .product:hover .product-image svg {
-            transform: scale(1.06) translateY(-4px);
+        .product:hover .product-image img {
+            transform: scale(1.06);
         }
 
         .badge {
@@ -490,6 +491,8 @@
             border-radius: 100px;
 
             text-transform: uppercase;
+
+            z-index: 3;
         }
 
         .favorite {
@@ -508,6 +511,8 @@
 
             cursor: pointer;
             font-size: 17px;
+
+            z-index: 3;
         }
 
         .product-info {
@@ -563,7 +568,7 @@
             transform: rotate(-10deg);
         }
 
-        /* ================= BANNER ================= */
+        /* BANNER */
 
         .promo {
             margin-top: 30px;
@@ -579,7 +584,7 @@
             background:
                 radial-gradient(circle at 80% 40%, rgba(255,255,255,.18), transparent 25%),
                 linear-gradient(115deg,#d91c72,#ff4f9b 55%,#ff9275);
-            
+
             color: white;
         }
 
@@ -614,7 +619,7 @@
             margin-bottom: 25px;
         }
 
-        /* ================= FOOTER ================= */
+        /* FOOTER */
 
         footer {
             background: var(--dark);
@@ -677,7 +682,7 @@
             font-size: 12px;
         }
 
-        /* ================= WHATSAPP ================= */
+        /* WHATSAPP */
 
         .whatsapp {
             position: fixed;
@@ -724,7 +729,7 @@
             }
         }
 
-        /* ================= SEARCH ================= */
+        /* BUSCA */
 
         .search-area {
             max-width: 1250px;
@@ -751,7 +756,7 @@
             box-shadow: 0 0 0 4px rgba(255,61,145,.08);
         }
 
-        /* ================= RESPONSIVE ================= */
+        /* RESPONSIVO */
 
         @media(max-width: 950px) {
 
@@ -952,87 +957,10 @@
 
             <div class="fashion-card">
 
-                <svg viewBox="0 0 300 450" xmlns="http://www.w3.org/2000/svg">
-
-                    <!-- cabeça -->
-                    <circle cx="150" cy="65" r="30" fill="#b66f5a"/>
-
-                    <!-- cabelo -->
-                    <path
-                        d="M115 67 C105 5 198 5 190 70
-                        C180 40 175 35 160 31
-                        C140 35 130 48 115 67Z"
-                        fill="#25151c"
-                    />
-
-                    <!-- pescoço -->
-                    <path d="M138 88 L162 88 L165 118 L135 118Z"
-                          fill="#b66f5a"/>
-
-                    <!-- corpo vestido -->
-                    <path
-                        d="M135 105
-                        Q150 115 165 105
-                        L195 150
-                        L180 215
-                        L205 390
-                        Q150 415 95 390
-                        L120 215
-                        L105 150Z"
-                        fill="#ff3d91"
-                    />
-
-                    <!-- brilho -->
-                    <path
-                        d="M140 125 Q150 135 160 125 L150 370Z"
-                        fill="#ff8fbd"
-                        opacity=".55"
-                    />
-
-                    <!-- braços -->
-                    <path
-                        d="M110 145 Q88 205 95 240"
-                        stroke="#b66f5a"
-                        stroke-width="17"
-                        fill="none"
-                        stroke-linecap="round"
-                    />
-
-                    <path
-                        d="M190 145 Q212 205 205 240"
-                        stroke="#b66f5a"
-                        stroke-width="17"
-                        fill="none"
-                        stroke-linecap="round"
-                    />
-
-                    <!-- pernas -->
-                    <path
-                        d="M125 385 L120 435"
-                        stroke="#b66f5a"
-                        stroke-width="18"
-                        stroke-linecap="round"
-                    />
-
-                    <path
-                        d="M175 385 L180 435"
-                        stroke="#b66f5a"
-                        stroke-width="18"
-                        stroke-linecap="round"
-                    />
-
-                    <!-- salto -->
-                    <path
-                        d="M105 437 L132 437 L145 443 L105 443Z"
-                        fill="#21141a"
-                    />
-
-                    <path
-                        d="M168 437 L195 437 L205 443 L168 443Z"
-                        fill="#21141a"
-                    />
-
-                </svg>
+                <img
+                    src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=900&q=90"
+                    alt="Moda feminina Sarah Canaã"
+                >
 
             </div>
 
@@ -1130,8 +1058,6 @@
 
     <div class="products">
 
-        <!-- Produto 1 -->
-
         <article class="product">
 
             <div class="product-image pink">
@@ -1140,55 +1066,10 @@
 
                 <button class="favorite">♡</button>
 
-                <svg viewBox="0 0 240 320">
-
-                    <circle cx="120" cy="38" r="23" fill="#a96753"/>
-
-                    <path
-                        d="M90 42 Q95 5 122 12 Q145 12 153 45
-                        Q140 23 120 20 Q100 25 90 42"
-                        fill="#20141a"
-                    />
-
-                    <path
-                        d="M105 65 L135 65
-                        L160 120
-                        L184 280
-                        Q120 300 56 280
-                        L80 120Z"
-                        fill="#e92d7d"
-                    />
-
-                    <path
-                        d="M105 65 L120 95 L135 65"
-                        fill="#ffb0d0"
-                        opacity=".8"
-                    />
-
-                    <path
-                        d="M85 125 Q60 170 70 200"
-                        stroke="#a96753"
-                        stroke-width="13"
-                        fill="none"
-                        stroke-linecap="round"
-                    />
-
-                    <path
-                        d="M155 125 Q180 170 170 200"
-                        stroke="#a96753"
-                        stroke-width="13"
-                        fill="none"
-                        stroke-linecap="round"
-                    />
-
-                    <path
-                        d="M95 280 L90 310 M145 280 L150 310"
-                        stroke="#a96753"
-                        stroke-width="15"
-                        stroke-linecap="round"
-                    />
-
-                </svg>
+                <img
+                    src="https://images.unsplash.com/photo-1612336307429-8a898d10e223?auto=format&fit=crop&w=800&q=90"
+                    alt="Vestido Pink Sunset"
+                >
 
             </div>
 
@@ -1210,8 +1091,6 @@
         </article>
 
 
-        <!-- Produto 2 -->
-
         <article class="product">
 
             <div class="product-image cream">
@@ -1220,55 +1099,10 @@
 
                 <button class="favorite">♡</button>
 
-                <svg viewBox="0 0 240 320">
-
-                    <circle cx="120" cy="38" r="23" fill="#9e624d"/>
-
-                    <path
-                        d="M92 44 Q90 5 120 10 Q153 9 150 48
-                        Q140 22 120 19 Q100 24 92 44"
-                        fill="#3b2020"
-                    />
-
-                    <path
-                        d="M105 65 L135 65
-                        L158 115
-                        L178 280
-                        Q120 300 62 280
-                        L82 115Z"
-                        fill="#f3e3cf"
-                    />
-
-                    <path
-                        d="M105 65 L120 90 L135 65"
-                        fill="#fff"
-                        opacity=".7"
-                    />
-
-                    <path
-                        d="M84 120 Q60 170 70 195"
-                        stroke="#9e624d"
-                        stroke-width="13"
-                        fill="none"
-                        stroke-linecap="round"
-                    />
-
-                    <path
-                        d="M156 120 Q180 170 170 195"
-                        stroke="#9e624d"
-                        stroke-width="13"
-                        fill="none"
-                        stroke-linecap="round"
-                    />
-
-                    <path
-                        d="M96 280 L91 310 M144 280 L149 310"
-                        stroke="#9e624d"
-                        stroke-width="15"
-                        stroke-linecap="round"
-                    />
-
-                </svg>
+                <img
+                    src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=800&q=90"
+                    alt="Vestido Vanilla"
+                >
 
             </div>
 
@@ -1290,62 +1124,16 @@
         </article>
 
 
-        <!-- Produto 3 -->
-
         <article class="product">
 
             <div class="product-image lilac">
 
                 <button class="favorite">♡</button>
 
-                <svg viewBox="0 0 240 320">
-
-                    <circle cx="120" cy="38" r="23" fill="#ad715c"/>
-
-                    <path
-                        d="M90 45 Q90 5 120 10 Q150 7 153 45
-                        Q137 22 120 21 Q100 23 90 45"
-                        fill="#18151b"
-                    />
-
-                    <path
-                        d="M105 65 L135 65
-                        L165 120
-                        L190 280
-                        Q120 300 50 280
-                        L75 120Z"
-                        fill="#a76ee8"
-                    />
-
-                    <path
-                        d="M105 65 L120 100 L135 65"
-                        fill="#d9bcff"
-                    />
-
-                    <path
-                        d="M82 120 Q58 165 68 195"
-                        stroke="#ad715c"
-                        stroke-width="13"
-                        fill="none"
-                        stroke-linecap="round"
-                    />
-
-                    <path
-                        d="M158 120 Q182 165 172 195"
-                        stroke="#ad715c"
-                        stroke-width="13"
-                        fill="none"
-                        stroke-linecap="round"
-                    />
-
-                    <path
-                        d="M95 280 L90 310 M145 280 L150 310"
-                        stroke="#ad715c"
-                        stroke-width="15"
-                        stroke-linecap="round"
-                    />
-
-                </svg>
+                <img
+                    src="https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=800&q=90"
+                    alt="Vestido Lilac Dream"
+                >
 
             </div>
 
@@ -1367,8 +1155,6 @@
         </article>
 
 
-        <!-- Produto 4 -->
-
         <article class="product">
 
             <div class="product-image dark">
@@ -1377,54 +1163,10 @@
 
                 <button class="favorite">♡</button>
 
-                <svg viewBox="0 0 240 320">
-
-                    <circle cx="120" cy="38" r="23" fill="#975a48"/>
-
-                    <path
-                        d="M90 45 Q88 4 120 9 Q153 7 151 47
-                        Q138 22 120 20 Q100 24 90 45"
-                        fill="#111"
-                    />
-
-                    <path
-                        d="M105 65 L135 65
-                        L162 115
-                        L182 280
-                        Q120 300 58 280
-                        L78 115Z"
-                        fill="#191319"
-                    />
-
-                    <path
-                        d="M106 65 L120 95 L134 65"
-                        fill="#ff3d91"
-                    />
-
-                    <path
-                        d="M82 120 Q60 165 70 195"
-                        stroke="#975a48"
-                        stroke-width="13"
-                        fill="none"
-                        stroke-linecap="round"
-                    />
-
-                    <path
-                        d="M158 120 Q180 165 170 195"
-                        stroke="#975a48"
-                        stroke-width="13"
-                        fill="none"
-                        stroke-linecap="round"
-                    />
-
-                    <path
-                        d="M95 280 L90 310 M145 280 L150 310"
-                        stroke="#975a48"
-                        stroke-width="15"
-                        stroke-linecap="round"
-                    />
-
-                </svg>
+                <img
+                    src="https://images.unsplash.com/photo-1566174053879-b64c2b3d7c8e?auto=format&fit=crop&w=800&q=90"
+                    alt="Vestido Black Night"
+                >
 
             </div>
 
@@ -1479,38 +1221,10 @@
 
                 <button class="favorite">♡</button>
 
-                <svg viewBox="0 0 300 250">
-
-                    <path
-                        d="M45 145
-                        Q75 130 105 80
-                        L150 95
-                        Q175 135 220 145
-                        L260 155
-                        Q280 165 275 185
-                        L55 185
-                        Q30 180 45 145Z"
-                        fill="#fff"
-                    />
-
-                    <path
-                        d="M105 80 L150 95 L165 125 L100 120Z"
-                        fill="#ff3d91"
-                    />
-
-                    <path
-                        d="M55 165 L270 165"
-                        stroke="#ff3d91"
-                        stroke-width="12"
-                    />
-
-                    <path
-                        d="M85 130 L115 150 M110 125 L140 150"
-                        stroke="#ddd"
-                        stroke-width="7"
-                    />
-
-                </svg>
+                <img
+                    src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=90"
+                    alt="Tênis Urban Pink"
+                >
 
             </div>
 
@@ -1538,33 +1252,10 @@
 
                 <button class="favorite">♡</button>
 
-                <svg viewBox="0 0 300 250">
-
-                    <path
-                        d="M75 165
-                        Q100 150 130 105
-                        L150 65
-                        Q170 60 185 78
-                        L180 145
-                        Q205 160 250 168
-                        Q275 173 275 190
-                        L65 190
-                        Q50 180 75 165Z"
-                        fill="#fff"
-                    />
-
-                    <path
-                        d="M130 105 L150 65 L170 80 L160 130Z"
-                        fill="#f3a7bd"
-                    />
-
-                    <path
-                        d="M80 170 L270 170"
-                        stroke="#d8829f"
-                        stroke-width="10"
-                    />
-
-                </svg>
+                <img
+                    src="https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=800&q=90"
+                    alt="Tênis Cloud White"
+                >
 
             </div>
 
@@ -1592,33 +1283,10 @@
 
                 <button class="favorite">♡</button>
 
-                <svg viewBox="0 0 300 250">
-
-                    <path
-                        d="M75 175
-                        Q95 165 115 140
-                        L145 80
-                        Q155 60 175 70
-                        L195 145
-                        Q210 165 260 175
-                        Q275 180 275 190
-                        L60 190
-                        Q55 180 75 175Z"
-                        fill="#fff"
-                    />
-
-                    <path
-                        d="M135 95 L170 70 L190 145 L150 135Z"
-                        fill="#a76ee8"
-                    />
-
-                    <path
-                        d="M65 175 L275 175"
-                        stroke="#8c58c8"
-                        stroke-width="11"
-                    />
-
-                </svg>
+                <img
+                    src="https://images.unsplash.com/photo-1603487742131-4160ec999306?auto=format&fit=crop&w=800&q=90"
+                    alt="Sandália Lavender Glow"
+                >
 
             </div>
 
@@ -1648,32 +1316,10 @@
 
                 <button class="favorite">♡</button>
 
-                <svg viewBox="0 0 300 250">
-
-                    <path
-                        d="M45 145
-                        Q75 130 105 80
-                        L150 95
-                        Q175 135 220 145
-                        L260 155
-                        Q280 165 275 185
-                        L55 185
-                        Q30 180 45 145Z"
-                        fill="#1c1820"
-                    />
-
-                    <path
-                        d="M105 80 L150 95 L165 125 L100 120Z"
-                        fill="#ff3d91"
-                    />
-
-                    <path
-                        d="M55 165 L270 165"
-                        stroke="#ff3d91"
-                        stroke-width="12"
-                    />
-
-                </svg>
+                <img
+                    src="https://images.unsplash.com/photo-1600269452121-4f2416e55c28?auto=format&fit=crop&w=800&q=90"
+                    alt="Tênis Midnight"
+                >
 
             </div>
 
@@ -1726,31 +1372,10 @@
 
                 <button class="favorite">♡</button>
 
-                <svg viewBox="0 0 240 300">
-
-                    <path
-                        d="M80 65 L105 50
-                        Q120 70 135 50
-                        L160 65
-                        L200 105
-                        L175 145
-                        L155 125
-                        L155 265
-                        L85 265
-                        L85 125
-                        L65 145
-                        L40 105Z"
-                        fill="#ff3d91"
-                    />
-
-                    <path
-                        d="M105 50 Q120 80 135 50"
-                        fill="none"
-                        stroke="#ffd4e5"
-                        stroke-width="8"
-                    />
-
-                </svg>
+                <img
+                    src="https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?auto=format&fit=crop&w=800&q=90"
+                    alt="Camisa Pink Basic"
+                >
 
             </div>
 
@@ -1778,31 +1403,10 @@
 
                 <button class="favorite">♡</button>
 
-                <svg viewBox="0 0 240 300">
-
-                    <path
-                        d="M80 65 L105 50
-                        Q120 70 135 50
-                        L160 65
-                        L200 105
-                        L175 145
-                        L155 125
-                        L155 265
-                        L85 265
-                        L85 125
-                        L65 145
-                        L40 105Z"
-                        fill="#f5eadc"
-                    />
-
-                    <path
-                        d="M105 50 Q120 80 135 50"
-                        fill="none"
-                        stroke="#d99b91"
-                        stroke-width="8"
-                    />
-
-                </svg>
+                <img
+                    src="https://images.unsplash.com/photo-1598554747436-c9293d6a588f?auto=format&fit=crop&w=800&q=90"
+                    alt="Camisa Soft Cream"
+                >
 
             </div>
 
@@ -1830,42 +1434,10 @@
 
                 <button class="favorite">♡</button>
 
-                <svg viewBox="0 0 240 300">
-
-                    <path
-                        d="M80 65 L105 50
-                        Q120 70 135 50
-                        L160 65
-                        L200 105
-                        L175 145
-                        L155 125
-                        L155 265
-                        L85 265
-                        L85 125
-                        L65 145
-                        L40 105Z"
-                        fill="#211820"
-                    />
-
-                    <path
-                        d="M105 50 Q120 80 135 50"
-                        fill="none"
-                        stroke="#ff3d91"
-                        stroke-width="8"
-                    />
-
-                    <text
-                        x="120"
-                        y="160"
-                        text-anchor="middle"
-                        fill="#ff3d91"
-                        font-size="16"
-                        font-family="Arial"
-                        font-weight="bold">
-                        SC
-                    </text>
-
-                </svg>
+                <img
+                    src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=800&q=90"
+                    alt="Camisa Sarah Black"
+                >
 
             </div>
 
@@ -1893,31 +1465,10 @@
 
                 <button class="favorite">♡</button>
 
-                <svg viewBox="0 0 240 300">
-
-                    <path
-                        d="M80 65 L105 50
-                        Q120 70 135 50
-                        L160 65
-                        L200 105
-                        L175 145
-                        L155 125
-                        L155 265
-                        L85 265
-                        L85 125
-                        L65 145
-                        L40 105Z"
-                        fill="#a76ee8"
-                    />
-
-                    <path
-                        d="M105 50 Q120 80 135 50"
-                        fill="none"
-                        stroke="#e7d4ff"
-                        stroke-width="8"
-                    />
-
-                </svg>
+                <img
+                    src="https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?auto=format&fit=crop&w=800&q=90"
+                    alt="Camisa Lavender Shirt"
+                >
 
             </div>
 
@@ -1970,36 +1521,10 @@
 
                 <button class="favorite">♡</button>
 
-                <svg viewBox="0 0 240 320">
-
-                    <path
-                        d="M75 45 L165 45
-                        L155 150
-                        L130 145
-                        L120 95
-                        L110 145
-                        L85 150Z"
-                        fill="#ff3d91"
-                    />
-
-                    <path
-                        d="M75 45 L165 45"
-                        stroke="#fff"
-                        stroke-width="7"
-                    />
-
-                    <path
-                        d="M88 45 L90 165
-                        L115 165
-                        L120 105
-                        L125 165
-                        L150 165
-                        L152 45Z"
-                        fill="#f5b3cc"
-                        opacity=".8"
-                    />
-
-                </svg>
+                <img
+                    src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=800&q=90"
+                    alt="Short Pink Denim"
+                >
 
             </div>
 
@@ -2027,36 +1552,10 @@
 
                 <button class="favorite">♡</button>
 
-                <svg viewBox="0 0 240 320">
-
-                    <path
-                        d="M75 45 L165 45
-                        L155 150
-                        L130 145
-                        L120 95
-                        L110 145
-                        L85 150Z"
-                        fill="#d9c0a8"
-                    />
-
-                    <path
-                        d="M75 45 L165 45"
-                        stroke="#fff"
-                        stroke-width="7"
-                    />
-
-                    <path
-                        d="M88 45 L90 165
-                        L115 165
-                        L120 105
-                        L125 165
-                        L150 165
-                        L152 45Z"
-                        fill="#b99778"
-                        opacity=".65"
-                    />
-
-                </svg>
+                <img
+                    src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=800&q=90"
+                    alt="Calça Classic Beige"
+                >
 
             </div>
 
@@ -2086,32 +1585,10 @@
 
                 <button class="favorite">♡</button>
 
-                <svg viewBox="0 0 240 320">
-
-                    <path
-                        d="M75 45 L165 45
-                        L155 270
-                        L125 270
-                        L120 125
-                        L115 270
-                        L85 270Z"
-                        fill="#211820"
-                    />
-
-                    <path
-                        d="M75 45 L165 45"
-                        stroke="#ff3d91"
-                        stroke-width="7"
-                    />
-
-                    <path
-                        d="M120 55 L120 270"
-                        stroke="#ff3d91"
-                        stroke-width="3"
-                        opacity=".6"
-                    />
-
-                </svg>
+                <img
+                    src="https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=800&q=90"
+                    alt="Calça Midnight Wide"
+                >
 
             </div>
 
@@ -2139,36 +1616,10 @@
 
                 <button class="favorite">♡</button>
 
-                <svg viewBox="0 0 240 320">
-
-                    <path
-                        d="M75 45 L165 45
-                        L155 150
-                        L130 145
-                        L120 95
-                        L110 145
-                        L85 150Z"
-                        fill="#9e70d2"
-                    />
-
-                    <path
-                        d="M75 45 L165 45"
-                        stroke="#fff"
-                        stroke-width="7"
-                    />
-
-                    <path
-                        d="M88 45 L90 165
-                        L115 165
-                        L120 105
-                        L125 165
-                        L150 165
-                        L152 45Z"
-                        fill="#c6a7ed"
-                        opacity=".6"
-                    />
-
-                </svg>
+                <img
+                    src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=800&q=90"
+                    alt="Short Lavender"
+                >
 
             </div>
 
@@ -2307,6 +1758,23 @@
 
 <script>
 
+    /*
+    ==================================================
+    CONFIGURAÇÃO DO WHATSAPP
+    ==================================================
+
+    COLOQUE AQUI O NÚMERO DA LOJA.
+
+    Exemplo:
+    5511999999999
+
+    55 = Brasil
+    11 = DDD
+    999999999 = número
+
+    Não coloque espaços, +, parênteses ou hífen.
+    */
+
     const whatsappNumber = "5511999999999";
 
 
@@ -2367,8 +1835,6 @@
 
     }
 
-
-    // Favoritos
 
     document.querySelectorAll(".favorite").forEach(button => {
 
