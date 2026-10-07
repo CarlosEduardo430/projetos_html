@@ -1,0 +1,2396 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sarah Canaã | Moda Feminina</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --pink: #ff3d91;
+            --pink-light: #ff75b5;
+            --pink-dark: #c91867;
+            --hot-pink: #ff167f;
+            --cream: #fff8f8;
+            --dark: #171015;
+            --dark-2: #24151e;
+            --gray: #756a70;
+            --white: #ffffff;
+            --gold: #f5c86b;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "DM Sans", sans-serif;
+            background: var(--cream);
+            color: var(--dark);
+        }
+
+        /* ================= HEADER ================= */
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(23, 16, 21, 0.88);
+            backdrop-filter: blur(18px);
+            border-bottom: 1px solid rgba(255,255,255,.08);
+        }
+
+        .navbar {
+            max-width: 1250px;
+            height: 78px;
+            margin: auto;
+            padding: 0 25px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            color: white;
+            text-decoration: none;
+            font-family: "Playfair Display", serif;
+            font-size: 27px;
+            font-style: italic;
+        }
+
+        .logo span {
+            color: var(--pink);
+        }
+
+        nav {
+            display: flex;
+            gap: 28px;
+        }
+
+        nav a {
+            color: #eee;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            transition: .3s;
+        }
+
+        nav a:hover {
+            color: var(--pink-light);
+        }
+
+        .nav-icons {
+            display: flex;
+            gap: 12px;
+        }
+
+        .icon-btn {
+            width: 42px;
+            height: 42px;
+            border: 1px solid rgba(255,255,255,.12);
+            background: rgba(255,255,255,.06);
+            color: white;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 17px;
+            transition: .3s;
+        }
+
+        .icon-btn:hover {
+            background: var(--pink);
+            transform: translateY(-2px);
+        }
+
+        /* ================= HERO ================= */
+
+        .hero {
+            min-height: 780px;
+            padding: 150px 25px 80px;
+
+            position: relative;
+            overflow: hidden;
+
+            background:
+                radial-gradient(circle at 75% 25%, rgba(255, 52, 142, .42), transparent 25%),
+                radial-gradient(circle at 15% 80%, rgba(246, 147, 79, .28), transparent 25%),
+                linear-gradient(120deg, #160f15, #301522 55%, #171016);
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+
+            background:
+                linear-gradient(
+                    125deg,
+                    transparent 0 45%,
+                    rgba(255, 61, 145, .09) 45% 46%,
+                    transparent 46% 100%
+                );
+        }
+
+        .hero-content {
+            position: relative;
+            max-width: 1250px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .hero-text {
+            color: white;
+        }
+
+        .tag {
+            display: inline-flex;
+            padding: 8px 15px;
+            border: 1px solid rgba(255,255,255,.18);
+            border-radius: 100px;
+            color: #ffc0da;
+            background: rgba(255,255,255,.06);
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 22px;
+        }
+
+        .hero h1 {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(55px, 7vw, 100px);
+            line-height: .9;
+            font-weight: 600;
+            margin-bottom: 28px;
+        }
+
+        .hero h1 span {
+            color: var(--pink);
+            font-style: italic;
+        }
+
+        .hero p {
+            max-width: 520px;
+            color: #d6cdd2;
+            font-size: 17px;
+            line-height: 1.7;
+            margin-bottom: 35px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            border: none;
+            text-decoration: none;
+            cursor: pointer;
+
+            padding: 15px 24px;
+            border-radius: 100px;
+
+            font-weight: 700;
+            font-size: 14px;
+
+            transition: .3s;
+        }
+
+        .btn-primary {
+            color: white;
+            background: var(--pink);
+            box-shadow: 0 12px 30px rgba(255,61,145,.28);
+        }
+
+        .btn-primary:hover {
+            background: #ff5da5;
+            transform: translateY(-3px);
+            box-shadow: 0 16px 40px rgba(255,61,145,.4);
+        }
+
+        .btn-outline {
+            color: white;
+            border: 1px solid rgba(255,255,255,.25);
+            background: rgba(255,255,255,.05);
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: var(--dark);
+        }
+
+        /* Hero fashion figure */
+
+        .hero-fashion {
+            position: relative;
+            min-height: 500px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .sun {
+            width: 380px;
+            height: 380px;
+            border-radius: 50%;
+
+            position: absolute;
+
+            background:
+                radial-gradient(circle,
+                #ffb47b 0%,
+                #ff6d99 45%,
+                #ff3d91 70%,
+                transparent 71%
+                );
+
+            filter: blur(.2px);
+            opacity: .8;
+        }
+
+        .fashion-card {
+            position: relative;
+            width: 320px;
+            height: 450px;
+
+            border-radius: 180px 180px 30px 30px;
+
+            background:
+                linear-gradient(
+                    160deg,
+                    rgba(255,255,255,.16),
+                    rgba(255,255,255,.03)
+                );
+
+            border: 1px solid rgba(255,255,255,.18);
+
+            backdrop-filter: blur(8px);
+
+            transform: rotate(3deg);
+
+            box-shadow:
+                0 30px 100px rgba(0,0,0,.45),
+                0 0 80px rgba(255,61,145,.22);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .fashion-card svg {
+            width: 90%;
+            height: 90%;
+            filter: drop-shadow(0 20px 20px rgba(0,0,0,.3));
+        }
+
+        /* ================= CATEGORIES ================= */
+
+        .section {
+            max-width: 1250px;
+            margin: auto;
+            padding: 90px 25px;
+        }
+
+        .section-heading {
+            display: flex;
+            align-items: end;
+            justify-content: space-between;
+            margin-bottom: 35px;
+        }
+
+        .eyebrow {
+            color: var(--pink-dark);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 11px;
+            font-weight: 800;
+            margin-bottom: 9px;
+        }
+
+        .section-title {
+            font-family: "Playfair Display", serif;
+            font-size: 42px;
+            line-height: 1;
+        }
+
+        .section-description {
+            color: var(--gray);
+            max-width: 430px;
+            line-height: 1.6;
+        }
+
+        .categories {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+
+        .category {
+            height: 200px;
+            padding: 25px;
+
+            border-radius: 22px;
+
+            text-decoration: none;
+            color: white;
+
+            display: flex;
+            align-items: end;
+
+            position: relative;
+            overflow: hidden;
+
+            transition: .4s;
+        }
+
+        .category:hover {
+            transform: translateY(-7px);
+        }
+
+        .category::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+
+            background: linear-gradient(
+                transparent 25%,
+                rgba(0,0,0,.75)
+            );
+        }
+
+        .category:nth-child(1) {
+            background:
+                radial-gradient(circle at 50% 30%, #ff83b9, #8f164d 75%);
+        }
+
+        .category:nth-child(2) {
+            background:
+                radial-gradient(circle at 50% 30%, #f5b2c9, #632c45 75%);
+        }
+
+        .category:nth-child(3) {
+            background:
+                radial-gradient(circle at 50% 30%, #ff8ab5, #6d173d 75%);
+        }
+
+        .category:nth-child(4) {
+            background:
+                radial-gradient(circle at 50% 30%, #e39a9f, #46252e 75%);
+        }
+
+        .category-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .category h3 {
+            font-family: "Playfair Display", serif;
+            font-size: 25px;
+        }
+
+        .category small {
+            color: #f5dce5;
+        }
+
+        /* ================= PRODUCTS ================= */
+
+        .product-section {
+            background: #fff;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 22px;
+        }
+
+        .product {
+            background: white;
+            border: 1px solid #f1e4e9;
+            border-radius: 20px;
+            overflow: hidden;
+
+            transition: .35s;
+
+            position: relative;
+        }
+
+        .product:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 60px rgba(80,25,50,.12);
+        }
+
+        .product-image {
+            height: 330px;
+            position: relative;
+            overflow: hidden;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .product-image.pink {
+            background: linear-gradient(145deg,#ffdce9,#ff9ec5);
+        }
+
+        .product-image.lilac {
+            background: linear-gradient(145deg,#eadcff,#c59de6);
+        }
+
+        .product-image.cream {
+            background: linear-gradient(145deg,#fff0db,#f5b98e);
+        }
+
+        .product-image.dark {
+            background: linear-gradient(145deg,#3d202d,#160f15);
+        }
+
+        .product-image svg {
+            width: 78%;
+            height: 90%;
+            transition: .5s;
+        }
+
+        .product:hover .product-image svg {
+            transform: scale(1.06) translateY(-4px);
+        }
+
+        .badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+
+            background: var(--pink);
+            color: white;
+
+            font-size: 10px;
+            font-weight: 800;
+
+            padding: 7px 10px;
+            border-radius: 100px;
+
+            text-transform: uppercase;
+        }
+
+        .favorite {
+            position: absolute;
+            top: 14px;
+            right: 14px;
+
+            width: 37px;
+            height: 37px;
+
+            border: none;
+            border-radius: 50%;
+
+            background: rgba(255,255,255,.8);
+            color: #7b5968;
+
+            cursor: pointer;
+            font-size: 17px;
+        }
+
+        .product-info {
+            padding: 20px;
+        }
+
+        .product-category {
+            font-size: 10px;
+            color: var(--pink-dark);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 800;
+        }
+
+        .product h3 {
+            font-family: "Playfair Display", serif;
+            font-size: 21px;
+            margin: 6px 0;
+        }
+
+        .product-info p {
+            color: var(--gray);
+            font-size: 12px;
+            margin-bottom: 15px;
+        }
+
+        .price-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .price {
+            font-size: 19px;
+            font-weight: 800;
+        }
+
+        .buy {
+            width: 39px;
+            height: 39px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+
+            background: var(--dark);
+            color: white;
+
+            transition: .3s;
+        }
+
+        .buy:hover {
+            background: var(--pink);
+            transform: rotate(-10deg);
+        }
+
+        /* ================= BANNER ================= */
+
+        .promo {
+            margin-top: 30px;
+
+            min-height: 300px;
+            padding: 50px;
+
+            border-radius: 30px;
+
+            overflow: hidden;
+            position: relative;
+
+            background:
+                radial-gradient(circle at 80% 40%, rgba(255,255,255,.18), transparent 25%),
+                linear-gradient(115deg,#d91c72,#ff4f9b 55%,#ff9275);
+            
+            color: white;
+        }
+
+        .promo::after {
+            content: "SARAH";
+            position: absolute;
+            right: -30px;
+            bottom: -75px;
+
+            font-size: 190px;
+            font-weight: 900;
+
+            color: rgba(255,255,255,.08);
+        }
+
+        .promo-content {
+            position: relative;
+            z-index: 2;
+            max-width: 580px;
+        }
+
+        .promo h2 {
+            font-family: "Playfair Display", serif;
+            font-size: 48px;
+            line-height: 1;
+            margin-bottom: 16px;
+        }
+
+        .promo p {
+            color: #ffeaf3;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 70px 25px 30px;
+        }
+
+        .footer-inner {
+            max-width: 1250px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 50px;
+        }
+
+        footer .logo {
+            display: inline-block;
+            margin-bottom: 18px;
+        }
+
+        footer p {
+            color: #9d9298;
+            line-height: 1.7;
+            font-size: 14px;
+            max-width: 330px;
+        }
+
+        footer h4 {
+            margin-bottom: 18px;
+            font-size: 14px;
+        }
+
+        footer ul {
+            list-style: none;
+        }
+
+        footer li {
+            margin-bottom: 11px;
+        }
+
+        footer li a {
+            color: #9d9298;
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        footer li a:hover {
+            color: var(--pink);
+        }
+
+        .copyright {
+            max-width: 1250px;
+            margin: 50px auto 0;
+            padding-top: 25px;
+
+            border-top: 1px solid rgba(255,255,255,.08);
+
+            color: #70676c;
+            font-size: 12px;
+        }
+
+        /* ================= WHATSAPP ================= */
+
+        .whatsapp {
+            position: fixed;
+            right: 25px;
+            bottom: 25px;
+            z-index: 2000;
+
+            width: 62px;
+            height: 62px;
+
+            border-radius: 50%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: #25d366;
+            color: white;
+
+            text-decoration: none;
+            font-size: 28px;
+
+            box-shadow:
+                0 12px 35px rgba(37,211,102,.35);
+
+            animation: pulse 2s infinite;
+        }
+
+        .whatsapp:hover {
+            transform: scale(1.08);
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37,211,102,.5);
+            }
+
+            70% {
+                box-shadow: 0 0 0 14px rgba(37,211,102,0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(37,211,102,0);
+            }
+        }
+
+        /* ================= SEARCH ================= */
+
+        .search-area {
+            max-width: 1250px;
+            margin: auto;
+            padding: 25px 25px 0;
+        }
+
+        .search {
+            width: 100%;
+            padding: 16px 20px;
+
+            border-radius: 100px;
+            border: 1px solid #eadce2;
+
+            outline: none;
+            font-family: inherit;
+            font-size: 14px;
+
+            transition: .3s;
+        }
+
+        .search:focus {
+            border-color: var(--pink);
+            box-shadow: 0 0 0 4px rgba(255,61,145,.08);
+        }
+
+        /* ================= RESPONSIVE ================= */
+
+        @media(max-width: 950px) {
+
+            nav {
+                display: none;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .categories {
+                grid-template-columns: repeat(2,1fr);
+            }
+
+            .products {
+                grid-template-columns: repeat(2,1fr);
+            }
+
+            .footer-inner {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media(max-width: 600px) {
+
+            .navbar {
+                height: 68px;
+            }
+
+            .logo {
+                font-size: 22px;
+            }
+
+            .nav-icons .icon-btn:first-child {
+                display: none;
+            }
+
+            .hero {
+                min-height: auto;
+                padding-top: 120px;
+            }
+
+            .hero h1 {
+                font-size: 58px;
+            }
+
+            .hero-fashion {
+                min-height: 400px;
+            }
+
+            .fashion-card {
+                width: 260px;
+                height: 370px;
+            }
+
+            .sun {
+                width: 300px;
+                height: 300px;
+            }
+
+            .section {
+                padding: 65px 18px;
+            }
+
+            .section-heading {
+                display: block;
+            }
+
+            .section-description {
+                margin-top: 15px;
+            }
+
+            .categories,
+            .products {
+                grid-template-columns: 1fr 1fr;
+                gap: 10px;
+            }
+
+            .category {
+                height: 170px;
+                padding: 18px;
+            }
+
+            .category h3 {
+                font-size: 19px;
+            }
+
+            .product-image {
+                height: 230px;
+            }
+
+            .product-info {
+                padding: 14px;
+            }
+
+            .product h3 {
+                font-size: 17px;
+            }
+
+            .promo {
+                padding: 35px 25px;
+            }
+
+            .promo h2 {
+                font-size: 36px;
+            }
+
+            .footer-inner {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .whatsapp {
+                width: 55px;
+                height: 55px;
+                right: 17px;
+                bottom: 17px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="navbar">
+
+        <a href="#" class="logo">
+            Sarah <span>Canaã</span>
+        </a>
+
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#vestidos">Vestidos</a>
+            <a href="#calcados">Tênis & Sandálias</a>
+            <a href="#camisas">Camisas</a>
+            <a href="#calcas">Shorts & Calças</a>
+        </nav>
+
+        <div class="nav-icons">
+            <button class="icon-btn" onclick="document.querySelector('.search').focus()">⌕</button>
+            <button class="icon-btn">♡</button>
+        </div>
+
+    </div>
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero" id="inicio">
+
+    <div class="hero-content">
+
+        <div class="hero-text">
+
+            <div class="tag">
+                Nova coleção • 2026
+            </div>
+
+            <h1>
+                Vista sua<br>
+                <span>melhor versão.</span>
+            </h1>
+
+            <p>
+                Moda feminina para mulheres que gostam de personalidade,
+                atitude e elegância. Descubra a nova coleção Sarah Canaã.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#vestidos" class="btn btn-primary">
+                    Explorar coleção
+                </a>
+
+                <a href="#categorias" class="btn btn-outline">
+                    Ver categorias
+                </a>
+            </div>
+
+        </div>
+
+
+        <div class="hero-fashion">
+
+            <div class="sun"></div>
+
+            <div class="fashion-card">
+
+                <svg viewBox="0 0 300 450" xmlns="http://www.w3.org/2000/svg">
+
+                    <!-- cabeça -->
+                    <circle cx="150" cy="65" r="30" fill="#b66f5a"/>
+
+                    <!-- cabelo -->
+                    <path
+                        d="M115 67 C105 5 198 5 190 70
+                        C180 40 175 35 160 31
+                        C140 35 130 48 115 67Z"
+                        fill="#25151c"
+                    />
+
+                    <!-- pescoço -->
+                    <path d="M138 88 L162 88 L165 118 L135 118Z"
+                          fill="#b66f5a"/>
+
+                    <!-- corpo vestido -->
+                    <path
+                        d="M135 105
+                        Q150 115 165 105
+                        L195 150
+                        L180 215
+                        L205 390
+                        Q150 415 95 390
+                        L120 215
+                        L105 150Z"
+                        fill="#ff3d91"
+                    />
+
+                    <!-- brilho -->
+                    <path
+                        d="M140 125 Q150 135 160 125 L150 370Z"
+                        fill="#ff8fbd"
+                        opacity=".55"
+                    />
+
+                    <!-- braços -->
+                    <path
+                        d="M110 145 Q88 205 95 240"
+                        stroke="#b66f5a"
+                        stroke-width="17"
+                        fill="none"
+                        stroke-linecap="round"
+                    />
+
+                    <path
+                        d="M190 145 Q212 205 205 240"
+                        stroke="#b66f5a"
+                        stroke-width="17"
+                        fill="none"
+                        stroke-linecap="round"
+                    />
+
+                    <!-- pernas -->
+                    <path
+                        d="M125 385 L120 435"
+                        stroke="#b66f5a"
+                        stroke-width="18"
+                        stroke-linecap="round"
+                    />
+
+                    <path
+                        d="M175 385 L180 435"
+                        stroke="#b66f5a"
+                        stroke-width="18"
+                        stroke-linecap="round"
+                    />
+
+                    <!-- salto -->
+                    <path
+                        d="M105 437 L132 437 L145 443 L105 443Z"
+                        fill="#21141a"
+                    />
+
+                    <path
+                        d="M168 437 L195 437 L205 443 L168 443Z"
+                        fill="#21141a"
+                    />
+
+                </svg>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SEARCH -->
+
+<div class="search-area">
+    <input
+        class="search"
+        type="text"
+        placeholder="🔎  Procurar uma peça..."
+        onkeyup="searchProducts()"
+    >
+</div>
+
+
+<!-- CATEGORIAS -->
+
+<section class="section" id="categorias">
+
+    <div class="section-heading">
+
+        <div>
+            <div class="eyebrow">Explore</div>
+            <h2 class="section-title">Escolha seu estilo</h2>
+        </div>
+
+        <p class="section-description">
+            Peças escolhidas para transformar qualquer look
+            em uma produção inesquecível.
+        </p>
+
+    </div>
+
+
+    <div class="categories">
+
+        <a href="#vestidos" class="category">
+            <div class="category-content">
+                <h3>Vestidos</h3>
+                <small>Elegância & atitude</small>
+            </div>
+        </a>
+
+        <a href="#calcados" class="category">
+            <div class="category-content">
+                <h3>Tênis & Sandálias</h3>
+                <small>Conforto com estilo</small>
+            </div>
+        </a>
+
+        <a href="#camisas" class="category">
+            <div class="category-content">
+                <h3>Camisas</h3>
+                <small>Essenciais femininos</small>
+            </div>
+        </a>
+
+        <a href="#calcas" class="category">
+            <div class="category-content">
+                <h3>Shorts & Calças</h3>
+                <small>Streetwear feminino</small>
+            </div>
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- VESTIDOS -->
+
+<section class="section product-section" id="vestidos">
+
+    <div class="section-heading">
+
+        <div>
+            <div class="eyebrow">01 — Dresses</div>
+            <h2 class="section-title">Vestidos</h2>
+        </div>
+
+        <p class="section-description">
+            Silhuetas marcantes e detalhes delicados para
+            momentos especiais.
+        </p>
+
+    </div>
+
+
+    <div class="products">
+
+        <!-- Produto 1 -->
+
+        <article class="product">
+
+            <div class="product-image pink">
+
+                <span class="badge">Novo</span>
+
+                <button class="favorite">♡</button>
+
+                <svg viewBox="0 0 240 320">
+
+                    <circle cx="120" cy="38" r="23" fill="#a96753"/>
+
+                    <path
+                        d="M90 42 Q95 5 122 12 Q145 12 153 45
+                        Q140 23 120 20 Q100 25 90 42"
+                        fill="#20141a"
+                    />
+
+                    <path
+                        d="M105 65 L135 65
+                        L160 120
+                        L184 280
+                        Q120 300 56 280
+                        L80 120Z"
+                        fill="#e92d7d"
+                    />
+
+                    <path
+                        d="M105 65 L120 95 L135 65"
+                        fill="#ffb0d0"
+                        opacity=".8"
+                    />
+
+                    <path
+                        d="M85 125 Q60 170 70 200"
+                        stroke="#a96753"
+                        stroke-width="13"
+                        fill="none"
+                        stroke-linecap="round"
+                    />
+
+                    <path
+                        d="M155 125 Q180 170 170 200"
+                        stroke="#a96753"
+                        stroke-width="13"
+                        fill="none"
+                        stroke-linecap="round"
+                    />
+
+                    <path
+                        d="M95 280 L90 310 M145 280 L150 310"
+                        stroke="#a96753"
+                        stroke-width="15"
+                        stroke-linecap="round"
+                    />
+
+                </svg>
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">Vestido</span>
+
+                <h3>Vestido Pink Sunset</h3>
+
+                <p>Vestido midi com acabamento premium.</p>
+
+                <div class="price-row">
+                    <strong class="price">R$ 189,90</strong>
+                    <button class="buy" onclick="buy('Vestido Pink Sunset')">+</button>
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- Produto 2 -->
+
+        <article class="product">
+
+            <div class="product-image cream">
+
+                <span class="badge">Best seller</span>
+
+                <button class="favorite">♡</button>
+
+                <svg viewBox="0 0 240 320">
+
+                    <circle cx="120" cy="38" r="23" fill="#9e624d"/>
+
+                    <path
+                        d="M92 44 Q90 5 120 10 Q153 9 150 48
+                        Q140 22 120 19 Q100 24 92 44"
+                        fill="#3b2020"
+                    />
+
+                    <path
+                        d="M105 65 L135 65
+                        L158 115
+                        L178 280
+                        Q120 300 62 280
+                        L82 115Z"
+                        fill="#f3e3cf"
+                    />
+
+                    <path
+                        d="M105 65 L120 90 L135 65"
+                        fill="#fff"
+                        opacity=".7"
+                    />
+
+                    <path
+                        d="M84 120 Q60 170 70 195"
+                        stroke="#9e624d"
+                        stroke-width="13"
+                        fill="none"
+                        stroke-linecap="round"
+                    />
+
+                    <path
+                        d="M156 120 Q180 170 170 195"
+                        stroke="#9e624d"
+                        stroke-width="13"
+                        fill="none"
+                        stroke-linecap="round"
+                    />
+
+                    <path
+                        d="M96 280 L91 310 M144 280 L149 310"
+                        stroke="#9e624d"
+                        stroke-width="15"
+                        stroke-linecap="round"
+                    />
+
+                </svg>
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">Vestido</span>
+
+                <h3>Vestido Vanilla</h3>
+
+                <p>Leve, sofisticado e perfeito para o verão.</p>
+
+                <div class="price-row">
+                    <strong class="price">R$ 219,90</strong>
+                    <button class="buy" onclick="buy('Vestido Vanilla')">+</button>
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- Produto 3 -->
+
+        <article class="product">
+
+            <div class="product-image lilac">
+
+                <button class="favorite">♡</button>
+
+                <svg viewBox="0 0 240 320">
+
+                    <circle cx="120" cy="38" r="23" fill="#ad715c"/>
+
+                    <path
+                        d="M90 45 Q90 5 120 10 Q150 7 153 45
+                        Q137 22 120 21 Q100 23 90 45"
+                        fill="#18151b"
+                    />
+
+                    <path
+                        d="M105 65 L135 65
+                        L165 120
+                        L190 280
+                        Q120 300 50 280
+                        L75 120Z"
+                        fill="#a76ee8"
+                    />
+
+                    <path
+                        d="M105 65 L120 100 L135 65"
+                        fill="#d9bcff"
+                    />
+
+                    <path
+                        d="M82 120 Q58 165 68 195"
+                        stroke="#ad715c"
+                        stroke-width="13"
+                        fill="none"
+                        stroke-linecap="round"
+                    />
+
+                    <path
+                        d="M158 120 Q182 165 172 195"
+                        stroke="#ad715c"
+                        stroke-width="13"
+                        fill="none"
+                        stroke-linecap="round"
+                    />
+
+                    <path
+                        d="M95 280 L90 310 M145 280 L150 310"
+                        stroke="#ad715c"
+                        stroke-width="15"
+                        stroke-linecap="round"
+                    />
+
+                </svg>
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">Vestido</span>
+
+                <h3>Vestido Lilac Dream</h3>
+
+                <p>Modelagem feminina com toque contemporâneo.</p>
+
+                <div class="price-row">
+                    <strong class="price">R$ 199,90</strong>
+                    <button class="buy" onclick="buy('Vestido Lilac Dream')">+</button>
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- Produto 4 -->
+
+        <article class="product">
+
+            <div class="product-image dark">
+
+                <span class="badge">Premium</span>
+
+                <button class="favorite">♡</button>
+
+                <svg viewBox="0 0 240 320">
+
+                    <circle cx="120" cy="38" r="23" fill="#975a48"/>
+
+                    <path
+                        d="M90 45 Q88 4 120 9 Q153 7 151 47
+                        Q138 22 120 20 Q100 24 90 45"
+                        fill="#111"
+                    />
+
+                    <path
+                        d="M105 65 L135 65
+                        L162 115
+                        L182 280
+                        Q120 300 58 280
+                        L78 115Z"
+                        fill="#191319"
+                    />
+
+                    <path
+                        d="M106 65 L120 95 L134 65"
+                        fill="#ff3d91"
+                    />
+
+                    <path
+                        d="M82 120 Q60 165 70 195"
+                        stroke="#975a48"
+                        stroke-width="13"
+                        fill="none"
+                        stroke-linecap="round"
+                    />
+
+                    <path
+                        d="M158 120 Q180 165 170 195"
+                        stroke="#975a48"
+                        stroke-width="13"
+                        fill="none"
+                        stroke-linecap="round"
+                    />
+
+                    <path
+                        d="M95 280 L90 310 M145 280 L150 310"
+                        stroke="#975a48"
+                        stroke-width="15"
+                        stroke-linecap="round"
+                    />
+
+                </svg>
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">Vestido</span>
+
+                <h3>Black Night</h3>
+
+                <p>O clássico preto com uma pegada moderna.</p>
+
+                <div class="price-row">
+                    <strong class="price">R$ 239,90</strong>
+                    <button class="buy" onclick="buy('Black Night')">+</button>
+                </div>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- CALÇADOS -->
+
+<section class="section" id="calcados">
+
+    <div class="section-heading">
+
+        <div>
+            <div class="eyebrow">02 — Shoes</div>
+            <h2 class="section-title">Tênis & Sandálias</h2>
+        </div>
+
+        <p class="section-description">
+            Para completar seu look com conforto,
+            personalidade e muito estilo.
+        </p>
+
+    </div>
+
+
+    <div class="products">
+
+        <article class="product">
+
+            <div class="product-image pink">
+
+                <span class="badge">Novo</span>
+
+                <button class="favorite">♡</button>
+
+                <svg viewBox="0 0 300 250">
+
+                    <path
+                        d="M45 145
+                        Q75 130 105 80
+                        L150 95
+                        Q175 135 220 145
+                        L260 155
+                        Q280 165 275 185
+                        L55 185
+                        Q30 180 45 145Z"
+                        fill="#fff"
+                    />
+
+                    <path
+                        d="M105 80 L150 95 L165 125 L100 120Z"
+                        fill="#ff3d91"
+                    />
+
+                    <path
+                        d="M55 165 L270 165"
+                        stroke="#ff3d91"
+                        stroke-width="12"
+                    />
+
+                    <path
+                        d="M85 130 L115 150 M110 125 L140 150"
+                        stroke="#ddd"
+                        stroke-width="7"
+                    />
+
+                </svg>
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">Tênis</span>
+
+                <h3>Urban Pink</h3>
+
+                <p>Tênis casual feminino.</p>
+
+                <div class="price-row">
+                    <strong class="price">R$ 179,90</strong>
+                    <button class="buy" onclick="buy('Urban Pink')">+</button>
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <article class="product">
+
+            <div class="product-image cream">
+
+                <button class="favorite">♡</button>
+
+                <svg viewBox="0 0 300 250">
+
+                    <path
+                        d="M75 165
+                        Q100 150 130 105
+                        L150 65
+                        Q170 60 185 78
+                        L180 145
+                        Q205 160 250 168
+                        Q275 173 275 190
+                        L65 190
+                        Q50 180 75 165Z"
+                        fill="#fff"
+                    />
+
+                    <path
+                        d="M130 105 L150 65 L170 80 L160 130Z"
+                        fill="#f3a7bd"
+                    />
+
+                    <path
+                        d="M80 170 L270 170"
+                        stroke="#d8829f"
+                        stroke-width="10"
+                    />
+
+                </svg>
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">Tênis</span>
+
+                <h3>Cloud White</h3>
+
+                <p>Minimalista, leve e confortável.</p>
+
+                <div class="price-row">
+                    <strong class="price">R$ 199,90</strong>
+                    <button class="buy" onclick="buy('Cloud White')">+</button>
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <article class="product">
+
+            <div class="product-image lilac">
+
+                <button class="favorite">♡</button>
+
+                <svg viewBox="0 0 300 250">
+
+                    <path
+                        d="M75 175
+                        Q95 165 115 140
+                        L145 80
+                        Q155 60 175 70
+                        L195 145
+                        Q210 165 260 175
+                        Q275 180 275 190
+                        L60 190
+                        Q55 180 75 175Z"
+                        fill="#fff"
+                    />
+
+                    <path
+                        d="M135 95 L170 70 L190 145 L150 135Z"
+                        fill="#a76ee8"
+                    />
+
+                    <path
+                        d="M65 175 L275 175"
+                        stroke="#8c58c8"
+                        stroke-width="11"
+                    />
+
+                </svg>
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">Sandália</span>
+
+                <h3>Lavender Glow</h3>
+
+                <p>Sandália delicada para seus melhores looks.</p>
+
+                <div class="price-row">
+                    <strong class="price">R$ 129,90</strong>
+                    <button class="buy" onclick="buy('Lavender Glow')">+</button>
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <article class="product">
+
+            <div class="product-image dark">
+
+                <span class="badge">Premium</span>
+
+                <button class="favorite">♡</button>
+
+                <svg viewBox="0 0 300 250">
+
+                    <path
+                        d="M45 145
+                        Q75 130 105 80
+                        L150 95
+                        Q175 135 220 145
+                        L260 155
+                        Q280 165 275 185
+                        L55 185
+                        Q30 180 45 145Z"
+                        fill="#1c1820"
+                    />
+
+                    <path
+                        d="M105 80 L150 95 L165 125 L100 120Z"
+                        fill="#ff3d91"
+                    />
+
+                    <path
+                        d="M55 165 L270 165"
+                        stroke="#ff3d91"
+                        stroke-width="12"
+                    />
+
+                </svg>
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">Tênis</span>
+
+                <h3>Midnight</h3>
+
+                <p>Visual urbano para todos os dias.</p>
+
+                <div class="price-row">
+                    <strong class="price">R$ 189,90</strong>
+                    <button class="buy" onclick="buy('Tênis Midnight')">+</button>
+                </div>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- CAMISAS -->
+
+<section class="section product-section" id="camisas">
+
+    <div class="section-heading">
+
+        <div>
+            <div class="eyebrow">03 — Tops</div>
+            <h2 class="section-title">Camisas Femininas</h2>
+        </div>
+
+        <p class="section-description">
+            Básicos nada básicos para você montar
+            produções incríveis.
+        </p>
+
+    </div>
+
+
+    <div class="products">
+
+        <article class="product">
+
+            <div class="product-image pink">
+
+                <button class="favorite">♡</button>
+
+                <svg viewBox="0 0 240 300">
+
+                    <path
+                        d="M80 65 L105 50
+                        Q120 70 135 50
+                        L160 65
+                        L200 105
+                        L175 145
+                        L155 125
+                        L155 265
+                        L85 265
+                        L85 125
+                        L65 145
+                        L40 105Z"
+                        fill="#ff3d91"
+                    />
+
+                    <path
+                        d="M105 50 Q120 80 135 50"
+                        fill="none"
+                        stroke="#ffd4e5"
+                        stroke-width="8"
+                    />
+
+                </svg>
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">Camisa</span>
+
+                <h3>Pink Basic</h3>
+
+                <p>Camisa feminina essencial.</p>
+
+                <div class="price-row">
+                    <strong class="price">R$ 89,90</strong>
+                    <button class="buy" onclick="buy('Pink Basic')">+</button>
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <article class="product">
+
+            <div class="product-image cream">
+
+                <button class="favorite">♡</button>
+
+                <svg viewBox="0 0 240 300">
+
+                    <path
+                        d="M80 65 L105 50
+                        Q120 70 135 50
+                        L160 65
+                        L200 105
+                        L175 145
+                        L155 125
+                        L155 265
+                        L85 265
+                        L85 125
+                        L65 145
+                        L40 105Z"
+                        fill="#f5eadc"
+                    />
+
+                    <path
+                        d="M105 50 Q120 80 135 50"
+                        fill="none"
+                        stroke="#d99b91"
+                        stroke-width="8"
+                    />
+
+                </svg>
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">Camisa</span>
+
+                <h3>Soft Cream</h3>
+
+                <p>Leve e elegante para qualquer ocasião.</p>
+
+                <div class="price-row">
+                    <strong class="price">R$ 94,90</strong>
+                    <button class="buy" onclick="buy('Soft Cream')">+</button>
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <article class="product">
+
+            <div class="product-image dark">
+
+                <button class="favorite">♡</button>
+
+                <svg viewBox="0 0 240 300">
+
+                    <path
+                        d="M80 65 L105 50
+                        Q120 70 135 50
+                        L160 65
+                        L200 105
+                        L175 145
+                        L155 125
+                        L155 265
+                        L85 265
+                        L85 125
+                        L65 145
+                        L40 105Z"
+                        fill="#211820"
+                    />
+
+                    <path
+                        d="M105 50 Q120 80 135 50"
+                        fill="none"
+                        stroke="#ff3d91"
+                        stroke-width="8"
+                    />
+
+                    <text
+                        x="120"
+                        y="160"
+                        text-anchor="middle"
+                        fill="#ff3d91"
+                        font-size="16"
+                        font-family="Arial"
+                        font-weight="bold">
+                        SC
+                    </text>
+
+                </svg>
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">Camisa</span>
+
+                <h3>Sarah Black</h3>
+
+                <p>Minimalismo com personalidade.</p>
+
+                <div class="price-row">
+                    <strong class="price">R$ 109,90</strong>
+                    <button class="buy" onclick="buy('Sarah Black')">+</button>
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <article class="product">
+
+            <div class="product-image lilac">
+
+                <button class="favorite">♡</button>
+
+                <svg viewBox="0 0 240 300">
+
+                    <path
+                        d="M80 65 L105 50
+                        Q120 70 135 50
+                        L160 65
+                        L200 105
+                        L175 145
+                        L155 125
+                        L155 265
+                        L85 265
+                        L85 125
+                        L65 145
+                        L40 105Z"
+                        fill="#a76ee8"
+                    />
+
+                    <path
+                        d="M105 50 Q120 80 135 50"
+                        fill="none"
+                        stroke="#e7d4ff"
+                        stroke-width="8"
+                    />
+
+                </svg>
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">Camisa</span>
+
+                <h3>Lavender Shirt</h3>
+
+                <p>Cor marcante para looks modernos.</p>
+
+                <div class="price-row">
+                    <strong class="price">R$ 99,90</strong>
+                    <button class="buy" onclick="buy('Lavender Shirt')">+</button>
+                </div>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- SHORTS E CALÇAS -->
+
+<section class="section" id="calcas">
+
+    <div class="section-heading">
+
+        <div>
+            <div class="eyebrow">04 — Bottoms</div>
+            <h2 class="section-title">Shorts & Calças</h2>
+        </div>
+
+        <p class="section-description">
+            Modelagens que combinam conforto, atitude
+            e aquele toque fashion.
+        </p>
+
+    </div>
+
+
+    <div class="products">
+
+        <article class="product">
+
+            <div class="product-image pink">
+
+                <button class="favorite">♡</button>
+
+                <svg viewBox="0 0 240 320">
+
+                    <path
+                        d="M75 45 L165 45
+                        L155 150
+                        L130 145
+                        L120 95
+                        L110 145
+                        L85 150Z"
+                        fill="#ff3d91"
+                    />
+
+                    <path
+                        d="M75 45 L165 45"
+                        stroke="#fff"
+                        stroke-width="7"
+                    />
+
+                    <path
+                        d="M88 45 L90 165
+                        L115 165
+                        L120 105
+                        L125 165
+                        L150 165
+                        L152 45Z"
+                        fill="#f5b3cc"
+                        opacity=".8"
+                    />
+
+                </svg>
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">Shorts</span>
+
+                <h3>Pink Denim</h3>
+
+                <p>Short jeans feminino.</p>
+
+                <div class="price-row">
+                    <strong class="price">R$ 119,90</strong>
+                    <button class="buy" onclick="buy('Pink Denim')">+</button>
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <article class="product">
+
+            <div class="product-image cream">
+
+                <button class="favorite">♡</button>
+
+                <svg viewBox="0 0 240 320">
+
+                    <path
+                        d="M75 45 L165 45
+                        L155 150
+                        L130 145
+                        L120 95
+                        L110 145
+                        L85 150Z"
+                        fill="#d9c0a8"
+                    />
+
+                    <path
+                        d="M75 45 L165 45"
+                        stroke="#fff"
+                        stroke-width="7"
+                    />
+
+                    <path
+                        d="M88 45 L90 165
+                        L115 165
+                        L120 105
+                        L125 165
+                        L150 165
+                        L152 45Z"
+                        fill="#b99778"
+                        opacity=".65"
+                    />
+
+                </svg>
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">Calça</span>
+
+                <h3>Classic Beige</h3>
+
+                <p>Calça reta com corte sofisticado.</p>
+
+                <div class="price-row">
+                    <strong class="price">R$ 169,90</strong>
+                    <button class="buy" onclick="buy('Classic Beige')">+</button>
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <article class="product">
+
+            <div class="product-image dark">
+
+                <span class="badge">Novo</span>
+
+                <button class="favorite">♡</button>
+
+                <svg viewBox="0 0 240 320">
+
+                    <path
+                        d="M75 45 L165 45
+                        L155 270
+                        L125 270
+                        L120 125
+                        L115 270
+                        L85 270Z"
+                        fill="#211820"
+                    />
+
+                    <path
+                        d="M75 45 L165 45"
+                        stroke="#ff3d91"
+                        stroke-width="7"
+                    />
+
+                    <path
+                        d="M120 55 L120 270"
+                        stroke="#ff3d91"
+                        stroke-width="3"
+                        opacity=".6"
+                    />
+
+                </svg>
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">Calça</span>
+
+                <h3>Midnight Wide</h3>
+
+                <p>Modelagem wide leg urbana.</p>
+
+                <div class="price-row">
+                    <strong class="price">R$ 179,90</strong>
+                    <button class="buy" onclick="buy('Midnight Wide')">+</button>
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <article class="product">
+
+            <div class="product-image lilac">
+
+                <button class="favorite">♡</button>
+
+                <svg viewBox="0 0 240 320">
+
+                    <path
+                        d="M75 45 L165 45
+                        L155 150
+                        L130 145
+                        L120 95
+                        L110 145
+                        L85 150Z"
+                        fill="#9e70d2"
+                    />
+
+                    <path
+                        d="M75 45 L165 45"
+                        stroke="#fff"
+                        stroke-width="7"
+                    />
+
+                    <path
+                        d="M88 45 L90 165
+                        L115 165
+                        L120 105
+                        L125 165
+                        L150 165
+                        L152 45Z"
+                        fill="#c6a7ed"
+                        opacity=".6"
+                    />
+
+                </svg>
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">Shorts</span>
+
+                <h3>Lavender Short</h3>
+
+                <p>Conforto para seus dias de verão.</p>
+
+                <div class="price-row">
+                    <strong class="price">R$ 109,90</strong>
+                    <button class="buy" onclick="buy('Lavender Short')">+</button>
+                </div>
+
+            </div>
+
+        </article>
+
+    </div>
+
+
+    <!-- PROMOÇÃO -->
+
+    <div class="promo">
+
+        <div class="promo-content">
+
+            <div class="eyebrow" style="color:#ffe0ed">
+                Sarah Canaã
+            </div>
+
+            <h2>
+                Seu próximo look
+                começa aqui.
+            </h2>
+
+            <p>
+                Gostou de alguma peça? Fale diretamente
+                com nossa equipe pelo WhatsApp e consulte
+                tamanhos e disponibilidade.
+            </p>
+
+            <button class="btn btn-outline" onclick="openWhatsApp()">
+                Falar no WhatsApp →
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="footer-inner">
+
+        <div>
+
+            <a href="#" class="logo">
+                Sarah <span>Canaã</span>
+            </a>
+
+            <p>
+                Moda feminina para mulheres que
+                transformam presença em estilo.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h4>Comprar</h4>
+
+            <ul>
+                <li><a href="#vestidos">Vestidos</a></li>
+                <li><a href="#calcados">Tênis & Sandálias</a></li>
+                <li><a href="#camisas">Camisas</a></li>
+                <li><a href="#calcas">Shorts & Calças</a></li>
+            </ul>
+
+        </div>
+
+
+        <div>
+
+            <h4>Atendimento</h4>
+
+            <ul>
+                <li><a href="#" onclick="openWhatsApp()">WhatsApp</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Dúvidas</a></li>
+            </ul>
+
+        </div>
+
+
+        <div>
+
+            <h4>Sarah Canaã</h4>
+
+            <ul>
+                <li><a href="#">Sobre nós</a></li>
+                <li><a href="#">Privacidade</a></li>
+                <li><a href="#">Termos</a></li>
+            </ul>
+
+        </div>
+
+    </div>
+
+
+    <div class="copyright">
+        © 2026 Sarah Canaã. Todos os direitos reservados.
+    </div>
+
+</footer>
+
+
+<!-- WHATSAPP -->
+
+<a
+    href="#"
+    class="whatsapp"
+    onclick="openWhatsApp(); return false;"
+    title="Fale conosco pelo WhatsApp"
+>
+    ☎
+</a>
+
+
+<script>
+
+    const whatsappNumber = "5511999999999";
+
+
+    function openWhatsApp() {
+
+        const message =
+            "Olá! Vim pelo site da Sarah Canaã e gostaria de conhecer os produtos.";
+
+        const url =
+            "https://wa" + ".me/" +
+            whatsappNumber +
+            "?text=" +
+            encodeURIComponent(message);
+
+        window.open(url, "_blank");
+
+    }
+
+
+    function buy(product) {
+
+        const message =
+            "Olá! Tenho interesse no produto: " +
+            product +
+            ". Gostaria de saber mais informações e consultar a disponibilidade.";
+
+        const url =
+            "https://wa" + ".me/" +
+            whatsappNumber +
+            "?text=" +
+            encodeURIComponent(message);
+
+        window.open(url, "_blank");
+
+    }
+
+
+    function searchProducts() {
+
+        const input =
+            document.querySelector(".search").value.toLowerCase();
+
+        const products =
+            document.querySelectorAll(".product");
+
+        products.forEach(product => {
+
+            const text =
+                product.innerText.toLowerCase();
+
+            if (text.includes(input)) {
+                product.style.display = "";
+            } else {
+                product.style.display = "none";
+            }
+
+        });
+
+    }
+
+
+    // Favoritos
+
+    document.querySelectorAll(".favorite").forEach(button => {
+
+        button.addEventListener("click", () => {
+
+            if (button.innerText === "♡") {
+
+                button.innerText = "♥";
+                button.style.color = "#ff3d91";
+
+            } else {
+
+                button.innerText = "♡";
+                button.style.color = "#7b5968";
+
+            }
+
+        });
+
+    });
+
+</script>
+
+</body>
+</html>
