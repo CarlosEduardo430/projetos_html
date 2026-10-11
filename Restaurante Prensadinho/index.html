@@ -1,0 +1,1084 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Prensadinho - lanches caprichados, bebidas e acompanhamentos.">
+  <title>Prensadinho | Sabor que prensa!</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --amarelo: #ffd52f;
+      --amarelo-escuro: #f6bd00;
+      --creme: #fff9e8;
+      --preto: #24221b;
+      --cinza: #716d60;
+      --branco: #fff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+    }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      color: var(--preto);
+      background: var(--branco);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    /* CABEÇALHO */
+    .topbar {
+      min-height: 82px;
+      padding: 15px 6%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      background: var(--amarelo);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 1.4rem;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .logo-icon {
+      width: 36px;
+      height: 36px;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      color: var(--amarelo);
+      background: var(--preto);
+    }
+
+    .logo-dot {
+      color: #e16e00;
+      margin-left: -8px;
+    }
+
+    nav {
+      display: flex;
+      gap: 25px;
+      font-weight: 800;
+    }
+
+    nav a:hover {
+      opacity: .65;
+    }
+
+    .whatsapp {
+      display: inline-block;
+      padding: 12px 18px;
+      background: var(--preto);
+      color: var(--branco);
+      border-radius: 30px;
+      font-weight: 900;
+      text-align: center;
+    }
+
+    /* BOTÕES */
+    .botao {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 14px 22px;
+      border-radius: 30px;
+      font-weight: 900;
+      transition: .2s;
+      cursor: pointer;
+    }
+
+    .botao:hover {
+      transform: translateY(-3px);
+      opacity: .9;
+    }
+
+    .botao-preto {
+      color: var(--branco);
+      background: var(--preto);
+    }
+
+    .botao-branco {
+      color: var(--preto);
+      background: var(--branco);
+    }
+
+    /* INÍCIO */
+    .hero {
+      min-height: 580px;
+      padding: 70px 9%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 45px;
+      background: var(--amarelo);
+      overflow: hidden;
+    }
+
+    .etiqueta {
+      display: inline-block;
+      margin-bottom: 12px;
+      font-size: .76rem;
+      font-weight: 900;
+      letter-spacing: 1.5px;
+    }
+
+    .hero h1 {
+      font-size: clamp(3rem, 5vw, 5rem);
+      line-height: 1;
+      letter-spacing: -2px;
+      font-weight: 900;
+    }
+
+    .hero h1 span,
+    .titulo span,
+    .sobre h2 span {
+      color: #a85100;
+    }
+
+    .hero p {
+      max-width: 460px;
+      margin: 22px 0;
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+
+    .hero-botoes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .hero-foto {
+      position: relative;
+      max-width: 520px;
+      width: 100%;
+      justify-self: center;
+    }
+
+    .hero-foto img {
+      display: block;
+      width: 100%;
+      height: 370px;
+      object-fit: cover;
+      border: 9px solid white;
+      border-radius: 45% 45% 25px 25px;
+      transform: rotate(2deg);
+      box-shadow: 0 20px 40px #80600b30;
+    }
+
+    .selo {
+      position: absolute;
+      z-index: 2;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      background: white;
+      font-weight: 900;
+      font-size: .8rem;
+      box-shadow: 0 10px 25px #0002;
+    }
+
+    .selo-topo {
+      top: -15px;
+      right: -15px;
+      transform: rotate(8deg);
+    }
+
+    .selo-baixo {
+      bottom: -15px;
+      left: -15px;
+      background: var(--preto);
+      color: white;
+    }
+
+    /* SEÇÕES */
+    .container {
+      width: min(1160px, 90%);
+      margin: 0 auto;
+    }
+
+    .cardapio {
+      padding-top: 85px;
+      padding-bottom: 90px;
+    }
+
+    .cabecalho-secao {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 25px;
+      margin-bottom: 30px;
+    }
+
+    .titulo {
+      font-size: clamp(2.3rem, 4vw, 3.4rem);
+      line-height: 1.1;
+      font-weight: 900;
+      letter-spacing: -1px;
+    }
+
+    .cabecalho-secao p {
+      max-width: 330px;
+      color: var(--cinza);
+      line-height: 1.6;
+    }
+
+    /* ABAS DO CARDÁPIO */
+    .abas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 25px;
+    }
+
+    .aba {
+      padding: 11px 20px;
+      border: 1px solid #e9e3d5;
+      border-radius: 30px;
+      background: white;
+      color: var(--preto);
+      font-weight: 900;
+      cursor: pointer;
+      transition: .2s;
+    }
+
+    .aba:hover {
+      border-color: var(--amarelo-escuro);
+    }
+
+    .aba.ativa {
+      background: var(--amarelo);
+      border-color: var(--amarelo);
+    }
+
+    /* CARDS DOS PRODUTOS */
+    .grade-produtos {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .produto {
+      overflow: hidden;
+      border: 1px solid #eee9dc;
+      border-radius: 22px;
+      background: white;
+      transition: .2s;
+    }
+
+    .produto:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px #00000012;
+    }
+
+    .produto[hidden] {
+      display: none;
+    }
+
+    .produto img {
+      display: block;
+      width: 100%;
+      height: 210px;
+      object-fit: cover;
+      background: var(--creme);
+    }
+
+    .produto-info {
+      padding: 20px;
+    }
+
+    .produto-titulo {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      gap: 10px;
+    }
+
+    .produto h3 {
+      font-size: 1.1rem;
+      font-weight: 900;
+    }
+
+    .preco {
+      color: #a85100;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .produto p {
+      min-height: 44px;
+      margin: 10px 0 16px;
+      color: var(--cinza);
+      font-size: .9rem;
+      line-height: 1.55;
+    }
+
+    .pedir-produto {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 13px;
+      border-top: 1px solid #eee9dc;
+      font-weight: 900;
+      font-size: .9rem;
+    }
+
+    .seta {
+      display: grid;
+      place-items: center;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: var(--amarelo);
+    }
+
+    .aviso {
+      margin-top: 20px;
+      color: var(--cinza);
+      font-size: .82rem;
+    }
+
+    /* MENU DA SEMANA */
+    .semana {
+      padding: 80px 0;
+      background: var(--creme);
+    }
+
+    .grade-semana {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .dia {
+      padding: 22px;
+      border: 1px solid #f0e8d4;
+      border-radius: 18px;
+      background: white;
+    }
+
+    .dia-label {
+      display: grid;
+      place-items: center;
+      width: 45px;
+      height: 45px;
+      border-radius: 14px;
+      background: var(--amarelo);
+      font-weight: 900;
+    }
+
+    .dia h3 {
+      margin: 15px 0 8px;
+      font-size: 1.05rem;
+      font-weight: 900;
+    }
+
+    .dia p {
+      min-height: 44px;
+      margin-bottom: 14px;
+      color: var(--cinza);
+      font-size: .9rem;
+      line-height: 1.5;
+    }
+
+    .dia strong {
+      color: #a85100;
+    }
+
+    .domingo {
+      background: var(--amarelo);
+      border-color: var(--amarelo);
+    }
+
+    .domingo .dia-label {
+      background: var(--preto);
+      color: white;
+    }
+
+    .domingo strong {
+      color: var(--preto);
+    }
+
+    .botao-semana {
+      margin-top: 28px;
+    }
+
+    /* SOBRE */
+    .sobre {
+      padding-top: 80px;
+      padding-bottom: 80px;
+      display: flex;
+      align-items: center;
+      gap: 35px;
+    }
+
+    .marca {
+      flex: 0 0 145px;
+      width: 145px;
+      height: 145px;
+      display: grid;
+      place-items: center;
+      border-radius: 35px;
+      background: var(--amarelo);
+      font-size: 5rem;
+      font-weight: 900;
+      transform: rotate(-5deg);
+    }
+
+    .sobre-texto {
+      flex: 1;
+    }
+
+    .sobre p {
+      max-width: 510px;
+      margin-top: 15px;
+      color: var(--cinza);
+      line-height: 1.7;
+    }
+
+    /* RODAPÉ */
+    footer {
+      padding: 25px 6%;
+      min-height: 90px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      color: white;
+      background: var(--preto);
+    }
+
+    footer .logo-icon {
+      background: var(--amarelo);
+      color: var(--preto);
+    }
+
+    footer p,
+    footer > a:last-child {
+      color: #e2dece;
+      font-size: .85rem;
+    }
+
+    /* BOTÃO FIXO DO WHATSAPP */
+    .whatsapp-flutuante {
+      position: fixed;
+      z-index: 20;
+      right: 22px;
+      bottom: 22px;
+      width: 58px;
+      height: 58px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: #20c767;
+      color: white;
+      font-size: 1.8rem;
+      font-weight: 900;
+      box-shadow: 0 8px 24px #0003;
+    }
+
+    /* CELULARES E TABLETS */
+    @media (max-width: 900px) {
+      .topbar {
+        padding: 15px 4%;
+      }
+
+      nav {
+        gap: 12px;
+        font-size: .85rem;
+      }
+
+      .hero {
+        padding-left: 6%;
+        padding-right: 6%;
+        gap: 25px;
+      }
+
+      .hero-foto img {
+        height: 300px;
+      }
+
+      .grade-produtos,
+      .grade-semana {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 640px) {
+      .topbar {
+        min-height: auto;
+        flex-wrap: wrap;
+        padding: 14px 5%;
+        gap: 12px;
+      }
+
+      .logo {
+        font-size: 1.2rem;
+      }
+
+      nav {
+        order: 3;
+        width: 100%;
+        justify-content: space-between;
+        font-size: .8rem;
+      }
+
+      .top-whatsapp {
+        padding: 10px 12px;
+        font-size: .75rem;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        padding: 50px 6% 65px;
+        gap: 40px;
+      }
+
+      .hero h1 {
+        font-size: clamp(3rem, 12vw, 4.3rem);
+      }
+
+      .hero-foto {
+        width: 90%;
+      }
+
+      .hero-foto img {
+        height: 280px;
+      }
+
+      .container {
+        width: 90%;
+      }
+
+      .cardapio,
+      .semana {
+        padding-top: 60px;
+        padding-bottom: 60px;
+      }
+
+      .cabecalho-secao {
+        display: block;
+      }
+
+      .cabecalho-secao p {
+        margin-top: 14px;
+      }
+
+      .grade-produtos,
+      .grade-semana {
+        grid-template-columns: 1fr;
+      }
+
+      .produto img {
+        height: 230px;
+      }
+
+      .dia p {
+        min-height: auto;
+      }
+
+      .sobre {
+        flex-wrap: wrap;
+        gap: 25px;
+        padding-top: 60px;
+        padding-bottom: 60px;
+      }
+
+      .marca {
+        flex-basis: 90px;
+        width: 90px;
+        height: 90px;
+        font-size: 3rem;
+      }
+
+      .sobre-texto {
+        flex-basis: calc(100% - 120px);
+      }
+
+      .sobre > .botao {
+        width: 100%;
+      }
+
+      footer {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 28px 6%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- CABEÇALHO -->
+  <header class="topbar">
+    <a class="logo" href="#inicio">
+      <span class="logo-icon">P</span>
+      prensadinho<span class="logo-dot">.</span>
+    </a>
+
+    <nav>
+      <a href="#cardapio">Cardápio</a>
+      <a href="#semana">Menu da semana</a>
+      <a href="#sobre">Sobre</a>
+    </nav>
+
+    <!-- TROQUE O NÚMERO PELO WHATSAPP REAL -->
+    <a class="whatsapp top-whatsapp"
+       href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20quero%20fazer%20um%20pedido!"
+       target="_blank" rel="noopener">
+      Pedir no WhatsApp ↗
+    </a>
+  </header>
+
+  <main>
+
+    <!-- APRESENTAÇÃO -->
+    <section class="hero" id="inicio">
+      <div class="hero-texto">
+        <span class="etiqueta">🔥 FEITO NA HORA, DO JEITO CERTO</span>
+
+        <h1>
+          Seu lanche.<br>
+          Seu momento.<br>
+          <span>Seu Prensadinho.</span>
+        </h1>
+
+        <p>
+          Pão quentinho, recheio caprichado e aquele queijo
+          derretendo. Deu fome? A gente resolve!
+        </p>
+
+        <div class="hero-botoes">
+          <a class="botao botao-preto" href="#cardapio">
+            Ver cardápio ↓
+          </a>
+
+          <a class="botao botao-branco"
+             href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20quero%20fazer%20um%20pedido!"
+             target="_blank" rel="noopener">
+            Pedir agora ↗
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-foto">
+        <div class="selo selo-topo">QUENTINHO<br>É MELHOR!</div>
+
+        <img
+          src="https://images.unsplash.com/photo-1553909489-cd47e0ef937f?auto=format&fit=crop&w=1100&q=85"
+          alt="Sanduíche caprichado">
+
+        <div class="selo selo-baixo">😋<br>Feito com carinho</div>
+      </div>
+    </section>
+
+    <!-- CARDÁPIO -->
+    <section class="cardapio container" id="cardapio">
+      <div class="cabecalho-secao">
+        <div>
+          <span class="etiqueta">ESCOLHA SEU FAVORITO</span>
+          <h2 class="titulo">Cardápio <span>da casa</span></h2>
+        </div>
+
+        <p>
+          Tem opção para matar a fome, acompanhar
+          e refrescar.
+        </p>
+      </div>
+
+      <!-- ABAS -->
+      <div class="abas" role="tablist" aria-label="Categorias">
+        <button class="aba ativa" role="tab"
+                aria-selected="true" data-categoria="comidas">
+          🥪 Comidas
+        </button>
+
+        <button class="aba" role="tab"
+                aria-selected="false" data-categoria="bebidas">
+          🥤 Bebidas
+        </button>
+
+        <button class="aba" role="tab"
+                aria-selected="false" data-categoria="acompanhamentos">
+          🍟 Acompanhamentos
+        </button>
+      </div>
+
+      <div class="grade-produtos">
+
+        <!-- COMIDA 1 -->
+        <article class="produto" data-categoria="comidas">
+          <img
+            src="https://images.unsplash.com/photo-1553909489-cd47e0ef937f?auto=format&fit=crop&w=700&q=80"
+            alt="Sanduíche clássico" loading="lazy">
+
+          <div class="produto-info">
+            <div class="produto-titulo">
+              <h3>Prensado Clássico</h3>
+              <span class="preco">R$ 12,90</span>
+            </div>
+
+            <p>Presunto, queijo derretido, tomate e orégano.</p>
+
+            <a class="pedir-produto"
+               href="https://wa.me/5511999999999?text=Quero%20pedir%20o%20Prensado%20Cl%C3%A1ssico"
+               target="_blank" rel="noopener">
+              Quero esse <span class="seta">↗</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- COMIDA 2 -->
+        <article class="produto" data-categoria="comidas">
+          <img
+            src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=700&q=80"
+            alt="Hambúrguer artesanal" loading="lazy">
+
+          <div class="produto-info">
+            <div class="produto-titulo">
+              <h3>Prensado Burger</h3>
+              <span class="preco">R$ 18,90</span>
+            </div>
+
+            <p>Hambúrguer, queijo, salada e molho da casa.</p>
+
+            <a class="pedir-produto"
+               href="https://wa.me/5511999999999?text=Quero%20pedir%20o%20Prensado%20Burger"
+               target="_blank" rel="noopener">
+              Quero esse <span class="seta">↗</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- COMIDA 3 -->
+        <article class="produto" data-categoria="comidas">
+          <img
+            src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=700&q=80"
+            alt="Sanduíche de frango" loading="lazy">
+
+          <div class="produto-info">
+            <div class="produto-titulo">
+              <h3>Frango Cremoso</h3>
+              <span class="preco">R$ 16,90</span>
+            </div>
+
+            <p>Frango temperado, requeijão cremoso e queijo.</p>
+
+            <a class="pedir-produto"
+               href="https://wa.me/5511999999999?text=Quero%20pedir%20o%20Frango%20Cremoso"
+               target="_blank" rel="noopener">
+              Quero esse <span class="seta">↗</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- BEBIDA 1 -->
+        <article class="produto" data-categoria="bebidas" hidden>
+          <img
+            src="https://images.unsplash.com/photo-1513558161293-cdaf765edfd7?auto=format&fit=crop&w=700&q=80"
+            alt="Bebida gelada" loading="lazy">
+
+          <div class="produto-info">
+            <div class="produto-titulo">
+              <h3>Suco Natural</h3>
+              <span class="preco">R$ 7,00</span>
+            </div>
+
+            <p>Geladinho e refrescante. Consulte os sabores.</p>
+
+            <a class="pedir-produto"
+               href="https://wa.me/5511999999999?text=Quero%20um%20Suco%20Natural"
+               target="_blank" rel="noopener">
+              Quero esse <span class="seta">↗</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- BEBIDA 2 -->
+        <article class="produto" data-categoria="bebidas" hidden>
+          <img
+            src="https://images.unsplash.com/photo-1629203851122-3726ecdf080e?auto=format&fit=crop&w=700&q=80"
+            alt="Refrigerante gelado" loading="lazy">
+
+          <div class="produto-info">
+            <div class="produto-titulo">
+              <h3>Refri Lata</h3>
+              <span class="preco">R$ 6,00</span>
+            </div>
+
+            <p>O parceiro perfeito para seu prensado.</p>
+
+            <a class="pedir-produto"
+               href="https://wa.me/5511999999999?text=Quero%20um%20Refri%20Lata"
+               target="_blank" rel="noopener">
+              Quero esse <span class="seta">↗</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- ACOMPANHAMENTO 1 -->
+        <article class="produto" data-categoria="acompanhamentos" hidden>
+          <img
+            src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=700&q=80"
+            alt="Batatas fritas" loading="lazy">
+
+          <div class="produto-info">
+            <div class="produto-titulo">
+              <h3>Batata Crocante</h3>
+              <span class="preco">R$ 10,00</span>
+            </div>
+
+            <p>Porção douradinha com tempero especial.</p>
+
+            <a class="pedir-produto"
+               href="https://wa.me/5511999999999?text=Quero%20Batata%20Crocante"
+               target="_blank" rel="noopener">
+              Quero esse <span class="seta">↗</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- ACOMPANHAMENTO 2 -->
+        <article class="produto" data-categoria="acompanhamentos" hidden>
+          <img
+            src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=700&q=80"
+            alt="Porção de salgados" loading="lazy">
+
+          <div class="produto-info">
+            <div class="produto-titulo">
+              <h3>Porção de Salgados</h3>
+              <span class="preco">R$ 13,00</span>
+            </div>
+
+            <p>Petiscos crocantes para dividir — ou não!</p>
+
+            <a class="pedir-produto"
+               href="https://wa.me/5511999999999?text=Quero%20uma%20Por%C3%A7%C3%A3o%20de%20Salgados"
+               target="_blank" rel="noopener">
+              Quero esse <span class="seta">↗</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- COMIDA 4 -->
+        <article class="produto" data-categoria="comidas">
+          <img
+            src="https://images.unsplash.com/photo-1521390188846-e2a3a97453a0?auto=format&fit=crop&w=700&q=80"
+            alt="Sanduíche especial" loading="lazy">
+
+          <div class="produto-info">
+            <div class="produto-titulo">
+              <h3>Especial da Casa</h3>
+              <span class="preco">R$ 21,90</span>
+            </div>
+
+            <p>Recheio generoso e molho especial do Prensadinho.</p>
+
+            <a class="pedir-produto"
+               href="https://wa.me/5511999999999?text=Quero%20o%20Especial%20da%20Casa"
+               target="_blank" rel="noopener">
+              Quero esse <span class="seta">↗</span>
+            </a>
+          </div>
+        </article>
+
+      </div>
+
+      <p class="aviso">
+        * Os produtos e preços são exemplos. Personalize conforme
+        o cardápio real do restaurante.
+      </p>
+    </section>
+
+    <!-- MENU DA SEMANA -->
+    <section class="semana" id="semana">
+      <div class="container">
+        <div class="cabecalho-secao">
+          <div>
+            <span class="etiqueta">UMA DELÍCIA PRA CADA DIA</span>
+            <h2 class="titulo">Menu da <span>semana</span></h2>
+          </div>
+
+          <p>Confira as sugestões especiais de segunda a domingo.</p>
+        </div>
+
+        <div class="grade-semana">
+
+          <article class="dia">
+            <span class="dia-label">SEG</span>
+            <h3>Segunda do Clássico</h3>
+            <p>Prensado clássico + refrigerante lata.</p>
+            <strong>R$ 16,90</strong>
+          </article>
+
+          <article class="dia">
+            <span class="dia-label">TER</span>
+            <h3>Terça do Burger</h3>
+            <p>Prensado Burger com molho da casa.</p>
+            <strong>R$ 18,90</strong>
+          </article>
+
+          <article class="dia">
+            <span class="dia-label">QUA</span>
+            <h3>Quarta Cremosa</h3>
+            <p>Frango cremoso + batata pequena.</p>
+            <strong>R$ 22,90</strong>
+          </article>
+
+          <article class="dia">
+            <span class="dia-label">QUI</span>
+            <h3>Quinta em Dobro</h3>
+            <p>Dois prensados clássicos para compartilhar.</p>
+            <strong>R$ 22,00</strong>
+          </article>
+
+          <article class="dia">
+            <span class="dia-label">SEX</span>
+            <h3>Sextou!</h3>
+            <p>Especial da casa + bebida gelada.</p>
+            <strong>R$ 25,90</strong>
+          </article>
+
+          <article class="dia">
+            <span class="dia-label">SÁB</span>
+            <h3>Sábado Completo</h3>
+            <p>Burger + batata crocante.</p>
+            <strong>R$ 25,00</strong>
+          </article>
+
+          <article class="dia domingo">
+            <span class="dia-label">DOM</span>
+            <h3>Domingo de Fome</h3>
+            <p>Monte seu combo favorito com a gente.</p>
+            <strong>A partir de R$ 16,90</strong>
+          </article>
+
+        </div>
+
+        <a class="botao botao-preto botao-semana"
+           href="https://wa.me/5511999999999?text=Oi%21%20Quero%20saber%20o%20combo%20do%20dia."
+           target="_blank" rel="noopener">
+          Perguntar o combo de hoje ↗
+        </a>
+      </div>
+    </section>
+
+    <!-- SOBRE O RESTAURANTE -->
+    <section class="sobre container" id="sobre">
+      <div class="marca">P<span>.</span></div>
+
+      <div class="sobre-texto">
+        <span class="etiqueta">MAIS QUE UM LANCHE</span>
+
+        <h2 class="titulo">
+          Feito na hora.<br>
+          <span>Feito pra você.</span>
+        </h2>
+
+        <p>
+          No Prensadinho, cada pedido sai quentinho,
+          caprichado e cheio de sabor. Escolha seu favorito
+          e chama a gente!
+        </p>
+      </div>
+
+      <a class="botao botao-preto"
+         href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20vim%20pelo%20site%20do%20Prensadinho!"
+         target="_blank" rel="noopener">
+        Fale com a gente ↗
+      </a>
+    </section>
+
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer>
+    <a class="logo" href="#inicio">
+      <span class="logo-icon">P</span>
+      prensadinho<span class="logo-dot">.</span>
+    </a>
+
+    <p>Feito com fome e carinho © <span id="ano"></span> Prensadinho</p>
+
+    <a href="https://wa.me/5511999999999"
+       target="_blank" rel="noopener">
+      WhatsApp ↗
+    </a>
+  </footer>
+
+  <!-- WHATSAPP FIXO -->
+  <a class="whatsapp-flutuante"
+     href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20quero%20fazer%20um%20pedido!"
+     target="_blank" rel="noopener"
+     aria-label="Fazer pedido pelo WhatsApp">
+    ☎
+  </a>
+
+  <!-- JAVASCRIPT DAS ABAS -->
+  <script>
+    const abas = document.querySelectorAll('.aba');
+    const produtos = document.querySelectorAll('.produto');
+
+    abas.forEach(function(aba) {
+      aba.addEventListener('click', function() {
+        const categoria = aba.dataset.categoria;
+
+        // Marca a aba selecionada
+        abas.forEach(function(item) {
+          const selecionada = item === aba;
+          item.classList.toggle('ativa', selecionada);
+          item.setAttribute(
+            'aria-selected',
+            selecionada ? 'true' : 'false'
+          );
+        });
+
+        // Mostra apenas os produtos da categoria
+        produtos.forEach(function(produto) {
+          produto.hidden = produto.dataset.categoria !== categoria;
+        });
+      });
+    });
+
+    // Atualiza o ano automaticamente
+    document.getElementById('ano').textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>
